@@ -1,0 +1,526 @@
+{
+  "title": "VisionMate Research: YOLO11n vs YOLO26n COCO Evaluation & Fine-Tuning Analysis",
+  "comparisons": {
+    "baseline_yolo11n_vs_yolo26n": {
+      "mAP50": {
+        "yolo11n": 0.6949,
+        "yolo26n": 0.6744,
+        "diff": -0.0205,
+        "pct_change": -2.95
+      },
+      "mAP50_95": {
+        "yolo11n": 0.5487,
+        "yolo26n": 0.5162,
+        "diff": -0.0325,
+        "pct_change": -5.92
+      },
+      "precision": {
+        "yolo11n": 0.6456,
+        "yolo26n": 0.7936,
+        "diff": 0.148,
+        "pct_change": 22.92
+      },
+      "recall": {
+        "yolo11n": 0.6234,
+        "yolo26n": 0.5474,
+        "diff": -0.076,
+        "pct_change": -12.19
+      },
+      "f1_score": {
+        "yolo11n": 0.6343,
+        "yolo26n": 0.6479,
+        "diff": 0.0136,
+        "pct_change": 2.14
+      },
+      "inference_ms": {
+        "yolo11n": 38.98,
+        "yolo26n": 20.452,
+        "diff": -18.528,
+        "pct_change": -47.53
+      },
+      "fps": {
+        "yolo11n": 23.3,
+        "yolo26n": 42.7,
+        "diff": 19.4,
+        "pct_change": 83.26
+      },
+      "parameters": {
+        "yolo11n": 2624080,
+        "yolo26n": 2572280,
+        "diff": -51800
+      }
+    },
+    "yolo11n_before_vs_after_finetune": {
+      "mAP50": {
+        "before": 0.6949,
+        "after": 0.6964,
+        "pct_change": 0.22
+      },
+      "mAP50_95": {
+        "before": 0.5487,
+        "after": 0.5222,
+        "pct_change": -4.83
+      },
+      "precision": {
+        "before": 0.6456,
+        "after": 0.6364,
+        "pct_change": -1.43
+      },
+      "recall": {
+        "before": 0.6234,
+        "after": 0.6305,
+        "pct_change": 1.14
+      }
+    },
+    "yolo26n_before_vs_after_finetune": {
+      "mAP50": {
+        "before": 0.6744,
+        "after": 0.644,
+        "pct_change": -4.51
+      },
+      "mAP50_95": {
+        "before": 0.5162,
+        "after": 0.5151,
+        "pct_change": -0.21
+      },
+      "precision": {
+        "before": 0.7936,
+        "after": 0.7015,
+        "pct_change": -11.61
+      },
+      "recall": {
+        "before": 0.5474,
+        "after": 0.5627,
+        "pct_change": 2.8
+      }
+    },
+    "finetuned_yolo11n_vs_yolo26n": {
+      "mAP50": {
+        "yolo11n_ft": 0.6964,
+        "yolo26n_ft": 0.644,
+        "diff": -0.0524,
+        "pct_change": -7.52
+      },
+      "mAP50_95": {
+        "yolo11n_ft": 0.5222,
+        "yolo26n_ft": 0.5151,
+        "diff": -0.0071,
+        "pct_change": -1.36
+      },
+      "precision": {
+        "yolo11n_ft": 0.6364,
+        "yolo26n_ft": 0.7015,
+        "diff": 0.0651,
+        "pct_change": 10.23
+      },
+      "recall": {
+        "yolo11n_ft": 0.6305,
+        "yolo26n_ft": 0.5627,
+        "diff": -0.0678,
+        "pct_change": -10.75
+      }
+    }
+  },
+  "per_class_baseline_comparison": {
+    "airplane": {
+      "yolo11n": 0.9203,
+      "yolo26n": 0.945,
+      "delta": 0.0247
+    },
+    "apple": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "backpack": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "banana": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "baseball bat": {
+      "yolo11n": 0.597,
+      "yolo26n": 0.3151,
+      "delta": -0.2819
+    },
+    "baseball glove": {
+      "yolo11n": 0.398,
+      "yolo26n": 0.398,
+      "delta": 0.0
+    },
+    "bear": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "bed": {
+      "yolo11n": 0.995,
+      "yolo26n": 0.4975,
+      "delta": -0.4975
+    },
+    "bench": {
+      "yolo11n": 0.0055,
+      "yolo26n": 0.0062,
+      "delta": 0.0007
+    },
+    "bicycle": {
+      "yolo11n": 0.1647,
+      "yolo26n": 0.3465,
+      "delta": 0.1818
+    },
+    "bird": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "boat": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "book": {
+      "yolo11n": 0.2535,
+      "yolo26n": 0.1369,
+      "delta": -0.1166
+    },
+    "bottle": {
+      "yolo11n": 0.5198,
+      "yolo26n": 0.4716,
+      "delta": -0.0482
+    },
+    "bowl": {
+      "yolo11n": 0.5459,
+      "yolo26n": 0.714,
+      "delta": 0.1681
+    },
+    "broccoli": {
+      "yolo11n": 0.002,
+      "yolo26n": 0.0237,
+      "delta": 0.0217
+    },
+    "bus": {
+      "yolo11n": 0.3543,
+      "yolo26n": 0.4746,
+      "delta": 0.1203
+    },
+    "cake": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "car": {
+      "yolo11n": 0.052,
+      "yolo26n": 0.0863,
+      "delta": 0.0343
+    },
+    "carrot": {
+      "yolo11n": 0.6434,
+      "yolo26n": 0.6187,
+      "delta": -0.0247
+    },
+    "cat": {
+      "yolo11n": 0.8295,
+      "yolo26n": 0.8187,
+      "delta": -0.0108
+    },
+    "cell phone": {
+      "yolo11n": 0.0,
+      "yolo26n": 0.0,
+      "delta": 0.0
+    },
+    "chair": {
+      "yolo11n": 0.3918,
+      "yolo26n": 0.3624,
+      "delta": -0.0294
+    },
+    "clock": {
+      "yolo11n": 0.8455,
+      "yolo26n": 0.796,
+      "delta": -0.0495
+    },
+    "couch": {
+      "yolo11n": 0.995,
+      "yolo26n": 0.995,
+      "delta": 0.0
+    },
+    "cow": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "cup": {
+      "yolo11n": 0.929,
+      "yolo26n": 0.8793,
+      "delta": -0.0497
+    },
+    "dining table": {
+      "yolo11n": 0.995,
+      "yolo26n": 0.995,
+      "delta": 0.0
+    },
+    "dog": {
+      "yolo11n": 0.995,
+      "yolo26n": 0.8955,
+      "delta": -0.0995
+    },
+    "donut": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "elephant": {
+      "yolo11n": 0.7742,
+      "yolo26n": 0.7958,
+      "delta": 0.0216
+    },
+    "fire hydrant": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "fork": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "frisbee": {
+      "yolo11n": 0.4455,
+      "yolo26n": 0.4455,
+      "delta": 0.0
+    },
+    "giraffe": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "hair drier": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "handbag": {
+      "yolo11n": 0.1568,
+      "yolo26n": 0.0418,
+      "delta": -0.115
+    },
+    "horse": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "hot dog": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "keyboard": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "kite": {
+      "yolo11n": 0.2063,
+      "yolo26n": 0.1762,
+      "delta": -0.0301
+    },
+    "knife": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "laptop": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "microwave": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "motorcycle": {
+      "yolo11n": 0.8955,
+      "yolo26n": 0.8955,
+      "delta": 0.0
+    },
+    "mouse": {
+      "yolo11n": 0.0,
+      "yolo26n": 0.398,
+      "delta": 0.398
+    },
+    "orange": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "oven": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "parking meter": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "person": {
+      "yolo11n": 0.5944,
+      "yolo26n": 0.5772,
+      "delta": -0.0172
+    },
+    "pizza": {
+      "yolo11n": 0.597,
+      "yolo26n": 0.2156,
+      "delta": -0.3814
+    },
+    "potted plant": {
+      "yolo11n": 0.9203,
+      "yolo26n": 0.8455,
+      "delta": -0.0748
+    },
+    "refrigerator": {
+      "yolo11n": 0.5472,
+      "yolo26n": 0.995,
+      "delta": 0.4478
+    },
+    "remote": {
+      "yolo11n": 0.8455,
+      "yolo26n": 0.945,
+      "delta": 0.0995
+    },
+    "sandwich": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "scissors": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "sheep": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "sink": {
+      "yolo11n": 0.3528,
+      "yolo26n": 0.3015,
+      "delta": -0.0513
+    },
+    "skateboard": {
+      "yolo11n": 0.995,
+      "yolo26n": 0.6965,
+      "delta": -0.2985
+    },
+    "skis": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "snowboard": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "spoon": {
+      "yolo11n": 0.8455,
+      "yolo26n": 0.4273,
+      "delta": -0.4182
+    },
+    "sports ball": {
+      "yolo11n": 0.4975,
+      "yolo26n": 0.597,
+      "delta": 0.0995
+    },
+    "stop sign": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "suitcase": {
+      "yolo11n": 0.995,
+      "yolo26n": 0.995,
+      "delta": 0.0
+    },
+    "surfboard": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "teddy bear": {
+      "yolo11n": 0.355,
+      "yolo26n": 0.4293,
+      "delta": 0.0743
+    },
+    "tennis racket": {
+      "yolo11n": 0.6965,
+      "yolo26n": 0.597,
+      "delta": -0.0995
+    },
+    "tie": {
+      "yolo11n": 0.0,
+      "yolo26n": 0.0,
+      "delta": 0.0
+    },
+    "toaster": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "toilet": {
+      "yolo11n": 0.995,
+      "yolo26n": 0.645,
+      "delta": -0.35
+    },
+    "toothbrush": {
+      "yolo11n": 0.7192,
+      "yolo26n": 0.6857,
+      "delta": -0.0335
+    },
+    "traffic light": {
+      "yolo11n": 0.0,
+      "yolo26n": 0.0,
+      "delta": 0.0
+    },
+    "train": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "truck": {
+      "yolo11n": 0.0063,
+      "yolo26n": 0.0,
+      "delta": -0.0063
+    },
+    "tv": {
+      "yolo11n": 0.8207,
+      "yolo26n": 0.746,
+      "delta": -0.0747
+    },
+    "umbrella": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "vase": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "wine glass": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    },
+    "zebra": {
+      "yolo11n": 0.5487,
+      "yolo26n": 0.5162,
+      "delta": -0.0325
+    }
+  }
+}

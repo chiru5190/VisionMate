@@ -1,0 +1,54 @@
+# Base Training Configuration for VisionMate YOLO11n & YOLO26n Fine-Tuning Experiment
+# Designed for NVIDIA RTX 2050 (4 GB VRAM) with Automatic Mixed Precision (AMP)
+
+# Dataset
+data: datasets/coco_experiment.yaml
+
+# Model Resolution & Hardware
+imgsz: 640
+batch: 2
+workers: 2
+device: 0
+amp: true
+cache: false
+
+# Training Duration
+epochs: 5
+patience: 10
+save: true
+save_period: -1
+
+# Optimization & Learning Rate Policy
+optimizer: SGD
+lr0: 0.01
+lrf: 0.01
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 1.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Loss Gains
+box: 7.5
+cls: 0.5
+dfl: 1.5
+
+# Augmentation Hyperparameters
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 0.0 # Disable heavy mosaic for subtle fine-tuning of pretrained weights
+mixup: 0.0
+
+# Validation & Logging
+val: true
+plots: true
+verbose: true
+

@@ -1,0 +1,113 @@
+{
+  "benchmark_parameters": {
+    "duration_seconds": 60,
+    "resolution": "640x480",
+    "imgsz": 640,
+    "confidence_threshold": 0.35,
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "pytorch_version": "2.5.1+cu121"
+  },
+  "yolo11n": {
+    "model": "yolo11n.pt",
+    "duration_seconds": 60.32,
+    "total_frames": 1790,
+    "average_fps": 29.68,
+    "yolo_latency_ms": {
+      "avg": 19.98,
+      "min": 13.14,
+      "max": 72.24,
+      "p95": 29.34
+    },
+    "pipeline_latency_ms": {
+      "avg": 33.53,
+      "min": 19.47,
+      "max": 133.45,
+      "p95": 56.27
+    },
+    "gpu_memory_mb": {
+      "allocated": 42.07,
+      "peak": 59.77,
+      "reserved": 68.0
+    },
+    "detection_frequency": {
+      "frames_with_detections": 1625,
+      "detection_rate_pct": 90.78,
+      "detections_by_class": {
+        "person": 1911,
+        "zebra": 99,
+        "chair": 22,
+        "donut": 2,
+        "cake": 2,
+        "baseball glove": 1,
+        "fork": 1
+      }
+    },
+    "missed_detection_gaps": {
+      "total_gaps": 76,
+      "avg_gap_frames": 14.18,
+      "longest_gap_frames": 632
+    },
+    "tracking_stability": {
+      "unique_raw_ids": 29,
+      "unique_logical_ids": 22,
+      "recovered_tracks_count": 8,
+      "id_fragmentation_ratio": 1.318
+    },
+    "assistant_queries": {
+      "Where is my bottle?": "I can't see your bottle right now.",
+      "Find my phone.": "I can't see your cell phone right now.",
+      "Where is my laptop?": "I can't see your laptop right now.",
+      "Where is the person?": "I found your person in the center, very close."
+    },
+    "obstacle_warnings_triggered": 2010
+  },
+  "yolo26n": {
+    "model": "yolo26n.pt",
+    "duration_seconds": 60.33,
+    "total_frames": 1791,
+    "average_fps": 29.68,
+    "yolo_latency_ms": {
+      "avg": 20.91,
+      "min": 16.35,
+      "max": 62.11,
+      "p95": 31.68
+    },
+    "pipeline_latency_ms": {
+      "avg": 33.5,
+      "min": 21.83,
+      "max": 128.43,
+      "p95": 55.48
+    },
+    "gpu_memory_mb": {
+      "allocated": 51.16,
+      "peak": 68.74,
+      "reserved": 96.0
+    },
+    "detection_frequency": {
+      "frames_with_detections": 1791,
+      "detection_rate_pct": 100.0,
+      "detections_by_class": {
+        "person": 2182,
+        "chair": 38
+      }
+    },
+    "missed_detection_gaps": {
+      "total_gaps": 99,
+      "avg_gap_frames": 5.35,
+      "longest_gap_frames": 8
+    },
+    "tracking_stability": {
+      "unique_raw_ids": 16,
+      "unique_logical_ids": 16,
+      "recovered_tracks_count": 0,
+      "id_fragmentation_ratio": 1.0
+    },
+    "assistant_queries": {
+      "Where is my bottle?": "I can't see your bottle right now.",
+      "Find my phone.": "I can't see your cell phone right now.",
+      "Where is my laptop?": "I can't see your laptop right now.",
+      "Where is the person?": "I found your person in the center, very close."
+    },
+    "obstacle_warnings_triggered": 2301
+  }
+}

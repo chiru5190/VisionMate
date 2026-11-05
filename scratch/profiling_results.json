@@ -1,0 +1,53 @@
+{
+  "session_duration_seconds": 30.01,
+  "total_frames": 716,
+  "average_fps": 23.86,
+  "imgsz": 416,
+  "components": {
+    "1. YOLO11n detection/tracking": {
+      "avg_ms": 27.2032,
+      "max_ms": 55.0121,
+      "percentage_of_total_frame": 64.91
+    },
+    "2. TrackRecoveryManager": {
+      "avg_ms": 0.0415,
+      "max_ms": 0.0986,
+      "percentage_of_total_frame": 0.1
+    },
+    "3. TemporalDetectionStabilizer": {
+      "avg_ms": 0.0137,
+      "max_ms": 0.0347,
+      "percentage_of_total_frame": 0.03
+    },
+    "4. PositionAnalyzer": {
+      "avg_ms": 0.0162,
+      "max_ms": 0.097,
+      "percentage_of_total_frame": 0.04
+    },
+    "5. DistanceEstimator": {
+      "avg_ms": 0.0164,
+      "max_ms": 0.5968,
+      "percentage_of_total_frame": 0.04
+    },
+    "6. Assistant processing": {
+      "avg_ms": 0.0002,
+      "max_ms": 0.0009,
+      "percentage_of_total_frame": 0.0
+    },
+    "7. Camera Read (Webcam I/O)": {
+      "avg_ms": 5.3533,
+      "max_ms": 48.9712,
+      "percentage_of_total_frame": 12.77
+    },
+    "8. Render & GUI Display": {
+      "avg_ms": 9.2565,
+      "max_ms": 47.3953,
+      "percentage_of_total_frame": 22.09
+    },
+    "9. Total frame processing time": {
+      "avg_ms": 41.9059,
+      "max_ms": 103.5097,
+      "percentage_of_total_frame": 100.0
+    }
+  }
+}

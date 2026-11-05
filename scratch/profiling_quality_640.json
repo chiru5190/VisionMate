@@ -1,0 +1,80 @@
+{
+  "timestamp": "2026-09-25 01:24:29",
+  "confidence_threshold": 0.25,
+  "imgsz": 640,
+  "session_duration_seconds": 60.01,
+  "total_frames": 1775,
+  "average_fps": 29.58,
+  "raw_phone_detected_frames": 530,
+  "raw_phone_detection_rate_pct": 29.86,
+  "stabilized_phone_detected_frames": 874,
+  "stabilized_phone_detection_rate_pct": 49.24,
+  "recovered_phone_frames": 11,
+  "raw_phone_detection_gaps": 80,
+  "longest_raw_gap_frames": 154,
+  "raw_track_id_changes": 53,
+  "logical_track_id_changes": 38,
+  "average_phone_confidence": 0.6123,
+  "minimum_phone_confidence": 0.3006,
+  "total_extra_object_detections": 4701,
+  "extra_detections_by_class": {
+    "person": 1827,
+    "bottle": 1827,
+    "chair": 775,
+    "keyboard": 110,
+    "backpack": 80,
+    "laptop": 44,
+    "remote": 23,
+    "cup": 7,
+    "toothbrush": 4,
+    "tie": 3,
+    "tv": 1
+  },
+  "performance_components": {
+    "1. YOLO11n detection/tracking": {
+      "avg_ms": 19.2105,
+      "max_ms": 38.6305,
+      "percentage_of_total_frame": 56.83
+    },
+    "2. TrackRecoveryManager": {
+      "avg_ms": 0.0506,
+      "max_ms": 0.2147,
+      "percentage_of_total_frame": 0.15
+    },
+    "3. TemporalDetectionStabilizer": {
+      "avg_ms": 0.0154,
+      "max_ms": 0.0836,
+      "percentage_of_total_frame": 0.05
+    },
+    "4. PositionAnalyzer": {
+      "avg_ms": 0.0213,
+      "max_ms": 0.195,
+      "percentage_of_total_frame": 0.06
+    },
+    "5. DistanceEstimator": {
+      "avg_ms": 0.0194,
+      "max_ms": 0.087,
+      "percentage_of_total_frame": 0.06
+    },
+    "6. Assistant processing": {
+      "avg_ms": 0.0001,
+      "max_ms": 0.0005,
+      "percentage_of_total_frame": 0.0
+    },
+    "7. Camera Read (Webcam I/O)": {
+      "avg_ms": 11.412,
+      "max_ms": 62.9623,
+      "percentage_of_total_frame": 33.76
+    },
+    "8. Render & GUI Display": {
+      "avg_ms": 3.0588,
+      "max_ms": 40.9991,
+      "percentage_of_total_frame": 9.05
+    },
+    "9. Total frame processing time": {
+      "avg_ms": 33.801,
+      "max_ms": 93.8942,
+      "percentage_of_total_frame": 100.0
+    }
+  }
+}

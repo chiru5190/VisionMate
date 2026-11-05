@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-11-04 17:54:26",
+  "overall_status": "ALL_PASSED",
+  "device": "NVIDIA GeForce RTX 2050",
+  "yolo11n_pilot": {
+    "model_checkpoint": "yolo11n.pt",
+    "exp_name": "pilot_yolo11n",
+    "status": "SUCCESS",
+    "duration_seconds": 54.2,
+    "peak_vram_mb": 500.12,
+    "initial_vram_mb": 42.1,
+    "save_dir": "runs/research/pilot_yolo11n",
+    "best_checkpoint_exists": true,
+    "last_checkpoint_exists": true,
+    "error": null
+  },
+  "yolo26n_pilot": {
+    "model_checkpoint": "yolo26n.pt",
+    "exp_name": "pilot_yolo26n",
+    "status": "SUCCESS",
+    "duration_seconds": 50.08,
+    "peak_vram_mb": 458.37,
+    "initial_vram_mb": 42.1,
+    "save_dir": "runs/research/pilot_yolo26n",
+    "best_checkpoint_exists": true,
+    "last_checkpoint_exists": true,
+    "error": null
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "timestamp": "2026-09-25 01:11:40",
+  "confidence_threshold": 0.25,
+  "imgsz": 640,
+  "session_duration_seconds": 60.03,
+  "total_frames": 1733,
+  "average_fps": 28.87,
+  "raw_phone_detected_frames": 373,
+  "raw_phone_detection_rate_pct": 21.52,
+  "stabilized_phone_detected_frames": 629,
+  "stabilized_phone_detection_rate_pct": 36.3,
+  "recovered_phone_frames": 8,
+  "raw_phone_detection_gaps": 65,
+  "longest_raw_gap_frames": 142,
+  "raw_track_id_changes": 42,
+  "logical_track_id_changes": 55,
+  "average_phone_confidence": 0.5705,
+  "minimum_phone_confidence": 0.3033,
+  "total_extra_object_detections": 4340,
+  "extra_detections_by_class": {
+    "person": 2218,
+    "bottle": 1664,
+    "chair": 288,
+    "laptop": 132,
+    "toothbrush": 37,
+    "cup": 1
+  },
+  "performance_components": {
+    "1. YOLO11n detection/tracking": {
+      "avg_ms": 18.4901,
+      "max_ms": 40.1096,
+      "percentage_of_total_frame": 53.4
+    },
+    "2. TrackRecoveryManager": {
+      "avg_ms": 0.0497,
+      "max_ms": 0.1274,
+      "percentage_of_total_frame": 0.14
+    },
+    "3. TemporalDetectionStabilizer": {
+      "avg_ms": 0.0151,
+      "max_ms": 0.0671,
+      "percentage_of_total_frame": 0.04
+    },
+    "4. PositionAnalyzer": {
+      "avg_ms": 0.0198,
+      "max_ms": 0.1837,
+      "percentage_of_total_frame": 0.06
+    },
+    "5. DistanceEstimator": {
+      "avg_ms": 0.0182,
+      "max_ms": 0.0796,
+      "percentage_of_total_frame": 0.05
+    },
+    "6. Assistant processing": {
+      "avg_ms": 0.0002,
+      "max_ms": 0.0265,
+      "percentage_of_total_frame": 0.0
+    },
+    "7. Camera Read (Webcam I/O)": {
+      "avg_ms": 13.1427,
+      "max_ms": 77.2295,
+      "percentage_of_total_frame": 37.96
+    },
+    "8. Render & GUI Display": {
+      "avg_ms": 2.8776,
+      "max_ms": 62.0668,
+      "percentage_of_total_frame": 8.31
+    },
+    "9. Total frame processing time": {
+      "avg_ms": 34.6259,
+      "max_ms": 100.2846,
+      "percentage_of_total_frame": 100.0
+    }
+  }
+}

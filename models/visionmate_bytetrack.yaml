@@ -1,0 +1,10 @@
+# VisionMate Customized ByteTrack Configuration
+# Optimized for real-time tracking continuity during object rotation, hand movement, and minor occlusions.
+
+tracker_type: bytetrack # Tracker backend: bytetrack
+track_high_thresh: 0.25 # First-stage match threshold for detection scores
+track_low_thresh: 0.10 # Second-stage threshold for weak detection recovery
+new_track_thresh: 0.25 # Threshold required to instantiate a brand new track
+track_buffer: 60 # Frames to keep lost tracks alive (60 frames ~3s at 20 FPS)
+match_thresh: 0.70 # Association IoU match threshold (0.70 allows robust matching during shape/aspect-ratio changes)
+fuse_score: True # Fuse detection score with motion/IoU for matching

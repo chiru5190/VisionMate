@@ -1,0 +1,55 @@
+# Research Configuration: YOLO26n Official COCO2017 Continued Fine-Tuning
+# Tuned for NVIDIA GeForce RTX 2050 (4 GB VRAM) with Automatic Mixed Precision (AMP)
+
+# Dataset & Initialization
+data: datasets/coco2017.yaml
+model: yolo26n.pt
+
+# Resolution & Hardware Execution
+imgsz: 640
+batch: 16             # Empirically verified via VRAM scaling pilot: 2.59 GB peak VRAM (63% capacity)
+workers: 4
+device: 0
+amp: true
+cache: false          # Avoid RAM exhaustion with 118k images
+
+# Training Schedule & Checkpoint Policy
+epochs: 10            # Early stopping patience ensures optimal convergence without overfitting
+patience: 3           # Stop early if validation mAP does not improve for 3 consecutive epochs
+save: true            # Save best.pt and last.pt
+save_period: 1        # Save periodic checkpoints every epoch
+
+# Optimization Hyperparameters
+optimizer: SGD
+lr0: 0.01             # Initial learning rate
+lrf: 0.01             # Final learning rate (lr0 * lrf)
+momentum: 0.937
+weight_decay: 0.0005
+warmup_epochs: 1.0
+warmup_momentum: 0.8
+warmup_bias_lr: 0.1
+
+# Loss Component Weights
+box: 7.5
+cls: 0.5
+dfl: 1.5
+
+# Augmentation Parameters (conservative fine-tuning to prevent destroying pretrained representations)
+hsv_h: 0.015
+hsv_s: 0.7
+hsv_v: 0.4
+degrees: 0.0
+translate: 0.1
+scale: 0.5
+shear: 0.0
+perspective: 0.0
+flipud: 0.0
+fliplr: 0.5
+mosaic: 0.0           # Disabled for continued fine-tuning of pretrained backbone
+mixup: 0.0
+
+# Validation & Reporting
+val: true
+plots: true
+verbose: true
+
